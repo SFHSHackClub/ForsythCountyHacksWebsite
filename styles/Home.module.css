@@ -1,7 +1,6 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
@@ -9,7 +8,6 @@
 
 .description {
   display: inherit;
-  justify-content: inherit;
   align-items: inherit;
   font-size: 0.85rem;
   max-width: var(--max-width);
@@ -18,20 +16,21 @@
   font-family: var(--font-mono);
 }
 
-.description a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.hackLogo {
+  display: block;
+  margin-left: 20px;
   gap: 0.5rem;
 }
 
 .description p {
-  position: relative;
-  margin: 0;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
   padding: 1rem;
-  background-color: rgba(var(--callout-rgb), 0.5);
-  border: 1px solid rgba(var(--callout-border-rgb), 0.3);
-  border-radius: var(--border-radius);
+  font-size: 60px;
+}
+
+@media screen and (min-width: 600px) {
 }
 
 .code {
