@@ -6,6 +6,22 @@
   min-height: 100vh;
 }
 
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6rem;
+  min-height: 100vh;
+}
+
+.header p {
+   text-align: center;
+   margin-right: auto;
+   margin-left: 50vw;
+   padding: 1rem;
+   font-size: 60px;
+ }
+
 .description {
   display: inherit;
   align-items: inherit;
@@ -119,7 +135,7 @@
   transform: translateZ(0);
   border-radius: var(--border-radius);
   overflow: hidden;
-  box-shadow: 0px 2px 8px -1px #0000001a;
+  box-shadow: 0 2px 8px -1px #0000001a;
 }
 
 .thirteen::before,
@@ -275,3 +291,88 @@
     transform: rotate(0deg);
   }
 }
+
+
+.spacer {
+  padding-bottom: 70px;
+  padding-top: 70px;
+  width: 100vw;
+  display: marker;
+}
+
+.scrollbtn {
+  right: 5vh;
+  bottom: 10vh;
+  padding: 10px;
+  position: fixed;
+  background-color: transparent;
+  border: transparent;
+}
+
+.section {
+   padding: 20px;
+   font-family: var(--font-mono);
+   width: 90%;
+  min-height: 100vh;
+ }
+
+.section h1 {
+  font-size: 4em;
+  padding: 20px;
+  text-align: center;
+}
+
+.section p {
+  font-size: 20px;
+}
+
+.what {
+  display: flex;
+}
+
+.what img {
+  left: 10vw;
+  transform: translateZ(0);
+  overflow: clip;
+  box-shadow: 0 0 30px 10px #60BB60;
+  border: var(--tile-border);
+}
+
+.what span {
+  right: 10vw;
+  padding: 10px;
+  margin-left: 40px;
+  text-align: left;
+}
+
+.what h1 {
+  font-size: 3vw;
+}
+
+.what p {
+  text-indent: 40px;
+  font-size: 1.1vw;
+}
+
+.faq {
+  display: inherit;
+  width: 100%;
+  padding: 20px;
+  font-size: 20px;
+}
+.faq h1 {
+  font-size: 70px;
+  padding: 20px;
+  text-align: center;
+}
+
+.faq ul {
+  list-style-image: url("../public/listArrow.png");
+  list-style-position: outside;
+}
+
+.faq li {
+  padding: 20px;
+}
+
+
