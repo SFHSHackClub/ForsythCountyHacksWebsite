@@ -3,13 +3,7 @@
   --border-radius: 12px;
   --font-mono: 'Fira Code';
 
-  --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 22, 144, 220;
-  --background-t1-rgb: 214, 219, 220;
-  --background-s1-rgb: 70, 241, 93;
-  --background-t2-rgb: 115, 82, 75;
-  --background-s2-rgb: 62, 44, 40;
-  --background-end-rgb: 62, 44, 40;
+  --foreground-rgb: 220, 220, 220;
 
   --primary-glow: conic-gradient(
     from 180deg at 50% 50%,
@@ -94,12 +88,14 @@ body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
-      rgb(var(--background-start-rgb)),
-      rgb(var(--background-t1-rgb)),
-      rgb(var(--background-s1-rgb)),
-      rgb(var(--background-t2-rgb)),
-      rgb(var(--background-s2-rgb)),
-      rgb(var(--background-end-rgb))
+      /*#90e0ef,
+      #48cae4,
+      #00b4d8,
+      #0096c7,
+      #0077b6,
+      #023e8a,
+      #03045e*/
+      #001236, #001744, #00246c, #00297a, #003398
     )
 }
 
