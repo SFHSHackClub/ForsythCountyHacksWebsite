@@ -360,6 +360,7 @@
   max-height: 500px;
   overflow: clip;
   float: right;
+  width: auto;
 }
 
 .what h1 {
@@ -392,12 +393,29 @@
   padding: 20px;
 }
 
+.contact {
+  background-color: #001236;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  text-align: left;
+  align-content: center;
+  float: left;
+  padding: 20px;
+  width: 100%;
+  margin: 20px
+}
+
+.contact hr {
+  width: 250px;
+  margin: 0 5px 5px 0;
+}
+
 @media (max-width: 700px) {
   .section {
     padding: 0;
   }
   .description img {
-    margin: 0;
+    margin: auto;
   }
   .description p {
     font-size: 0;
@@ -418,12 +436,16 @@
   .what img {
     width: 0;
     height: 0;
+    display: none;
   }
   .faq h1 {
     font-size: 30px;
   }
   .faq p {
     font-size: 14px;
+  }
+  .contact {
+    width: 90%;
   }
 }
 

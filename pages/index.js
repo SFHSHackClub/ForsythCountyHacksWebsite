@@ -20,11 +20,19 @@ const expandVars = {
 const textExpandVars = {
   visible: {
     opacity: 1,
-    width: "auto",
+    marginRight: 40,
+    transition: {
+      when: "beforeChildren",
+      staggerChildren: 0.05,
+    }
   },
   hidden: {
     opacity: 0,
-    width: "35vw",
+    marginRight: 0,
+    transition: {
+      when: "beforeChildren",
+      staggerChildren: 0.05,
+    }
   }
 }
 
@@ -99,15 +107,24 @@ export default function Home() {
             whileInView="visible"
             viewport={{once: false, amount: 0.8, margin: "20px"}}
             variants={textExpandVars}>
-            <motion.h1>What is a it?</motion.h1>
-            <motion.p> Forsyth Hacks is a full-day high school hackathon for building projects, making new friends, and having fun. </motion.p>
-            <motion.p>This event is an opportunity for students to explore the realm of computer science and bring their creative ideas to life through a collaborative and competitive experience. Students can form groups and work together on a coding project based on the theme and then present them at the end!</motion.p>
-            <motion.p>It doesn't matter if you've never written a piece of code in your life, or have already created an AI robot that writes essays for you. Everyone of every skill level is invited to join us in workshops, engage in countless activities, and meet other like-minded students!</motion.p>
-            <motion.p>Create projects, memories and guide the story of your STEM journey at Forsyth Hacks!</motion.p>
+            <motion.h1 variants={textExpandVars}>What is a it?</motion.h1>
+            <motion.p variants={textExpandVars}> Forsyth Hacks is a full-day high school hackathon for building projects, making new friends, and having fun. </motion.p>
+            <motion.p variants={textExpandVars}>This event is an opportunity for students to explore the realm of computer science and bring their creative ideas to life through a collaborative and competitive experience. Students can form groups and work together on a coding project based on the theme and then present them at the end!</motion.p>
+            <motion.p variants={textExpandVars}>It doesn't matter if you've never written a piece of code in your life, or have already created an AI robot that writes essays for you. Everyone of every skill level is invited to join us in workshops, engage in countless activities, and meet other like-minded students!</motion.p>
+            <motion.p variants={textExpandVars}>Create projects, memories and guide the story of your STEM journey at Forsyth Hacks!</motion.p>
           </motion.span>
         </div>
         <Spacer/>
         <QAlist/>
+        <Spacer/>
+        <div className={styles.contact}>
+          <h2>Contact Us</h2>
+          <hr/>
+          <p>
+            Email: something@email.ratio<br/>
+            Phone: 420-420-6969
+          </p>
+        </div>
       </main>
     </>
   )
