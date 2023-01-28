@@ -1,11 +1,43 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
 import ScrollToTopButton from "../components/topButton";
 import QAlist from "../components/qalist";
+import { motion } from "framer-motion";
 
 const inter = Inter({ subsets: ['latin'] })
+const expandVars = {
+  visible: {
+    opacity: 1,
+    width: "auto",
+  },
+  hidden: {
+    opacity: 0,
+    width: "200px",
+  }
+}
+
+const textExpandVars = {
+  visible: {
+    opacity: 1,
+    width: "auto",
+  },
+  hidden: {
+    opacity: 0,
+    width: "35vw",
+  }
+}
+
+const headerVars = {
+  visible: {
+    opacity: 1,
+    marginTop: 0,
+  },
+  hidden: {
+    opacity: 0,
+    marginTop: -50,
+  }
+}
 
 export default function Home() {
   return (
@@ -22,35 +54,57 @@ export default function Home() {
       <ScrollToTopButton/>
       <div className={styles.header}>
         <div className={styles.description}>
-          <Image
+          <motion.img
                 src="/hacks.png"
                 className={styles.hackLogo}
                 width={200}
                 height={200}
                 priority
+                layout
+                initial="hidden"
+                whileInView="visible"
+                viewport={{once: false, amount: 0.9, margin: "20px"}}
+                variants={headerVars}
           />
-          <p>
+          <motion.p
+            layout
+            initial="hidden"
+            whileInView="visible"
+            viewport={{once: false, amount: 0.9, margin: "20px"}}
+            variants={headerVars}>
             forsyth county
             <br></br>
             hacks
-          </p>
+          </motion.p>
+        </div>
+        <div className={styles.when}>
+          <h1>April Something, 2023<hr/>Some Library somewhere... </h1>
         </div>
       </div>
       <main className={styles.main}>
         <Spacer/>
         <div className={[styles.what, styles.section].join(" ")}>
-          <Image
+          <motion.img
             src="/hacker.jpg"
-            width={500}
             height={500}
+            width={500}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{once: false, amount: 0.8, margin: "20px"}}
+            variants={expandVars}
           />
-          <span>
-            <h1>What is a it?</h1>
-            <p> Forsyth Hacks is a full-day high school hackathon for building projects, making new friends, and having fun. </p>
-            <p>This event is an opportunity for students to explore the realm of computer science and bring their creative ideas to life through a collaborative and competitive experience. Students can form groups and work together on a coding project based on the theme and then present them at the end!</p>
-            <p>It doesn't matter if you've never written a piece of code in your life, or have already created an AI robot that writes essays for you. Everyone of every skill level is invited to join us in workshops, engage in countless activities, and meet other like-minded students!</p>
-            <p>Create projects, memories and guide the story of your STEM journey at Forsyth Hacks!</p>
-          </span>
+          <motion.span
+            layout
+            initial="hidden"
+            whileInView="visible"
+            viewport={{once: false, amount: 0.8, margin: "20px"}}
+            variants={textExpandVars}>
+            <motion.h1>What is a it?</motion.h1>
+            <motion.p> Forsyth Hacks is a full-day high school hackathon for building projects, making new friends, and having fun. </motion.p>
+            <motion.p>This event is an opportunity for students to explore the realm of computer science and bring their creative ideas to life through a collaborative and competitive experience. Students can form groups and work together on a coding project based on the theme and then present them at the end!</motion.p>
+            <motion.p>It doesn't matter if you've never written a piece of code in your life, or have already created an AI robot that writes essays for you. Everyone of every skill level is invited to join us in workshops, engage in countless activities, and meet other like-minded students!</motion.p>
+            <motion.p>Create projects, memories and guide the story of your STEM journey at Forsyth Hacks!</motion.p>
+          </motion.span>
         </div>
         <Spacer/>
         <QAlist/>
@@ -64,5 +118,4 @@ function Spacer() {
     <div className={styles.spacer}></div>
   )
 }
-
 
