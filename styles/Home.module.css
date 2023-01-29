@@ -6,6 +6,7 @@
   min-height: 100vh;
 }
 
+
 .header {
   display: flex;
   flex-direction: column;
@@ -443,6 +444,20 @@
   margin: auto;
 }
 
+.donateh {
+  width: 100%;
+  font-size: 30px;
+  font-family: var(--font-mono);
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+}
+
+.donate {
+  width: 50vw ;
+  height: 70vh;
+}
+
 .contact {
   background-color: #001236;
   font-family: var(--font-mono);
@@ -508,6 +523,10 @@
    }
   .contact {
     width: 90%;
+  }
+  .donate {
+    width: 90vw;
+    height: 100vh;
   }
 }
 

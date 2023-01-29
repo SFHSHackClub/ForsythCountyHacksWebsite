@@ -220,6 +220,10 @@ export default function Home() {
           </motion.div>
         </div>
         <Spacer/>
+        <h1 className={styles.donateh}>If you would like to donate, you can do so here:</h1>
+        <iframe
+          src={"https://bank.hackclub.com/donations/start/forsyth-county-hacks"}
+          className={styles.donate}/>
         <Spacer/>
         <div className={styles.contact}>
           <h2>Contact Us</h2>
