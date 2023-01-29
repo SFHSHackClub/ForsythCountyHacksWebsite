@@ -3,7 +3,7 @@ import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
 import ScrollToTopButton from "../components/topButton";
 import QAlist from "../components/qalist";
-import { motion } from "framer-motion";
+import {easeInOut, easeOut, motion} from "framer-motion";
 import Image from "next/image";
 
 const inter = Inter({ subsets: ['latin'] })
@@ -48,7 +48,7 @@ const headerVars = {
   }
 }
 
-const sponsorVars = [
+const slideTransitionVars = [
   {
     visible: {
       opacity: 1,
@@ -80,6 +80,41 @@ const sponsorVars = [
     }
   }
 ]
+
+const buttonVars = {
+  visible: {
+    transition: {
+      ease: easeOut,
+      duration: 0.1,
+    },
+    scaleX: 1,
+    scaleY: 1
+  },
+  hidden: {
+    transition: {
+      ease: easeOut,
+      duration: 1,
+    },
+    scaleX: 0,
+    scaleY: 0
+  },
+  hover: {
+    transition: {
+      ease: easeInOut(),
+      duration: 0.05,
+    },
+    scaleX: 1.05,
+    scaleY: 1.05
+  },
+  click: {
+    transition: {
+      ease: easeInOut(),
+      duration: 0.05,
+    },
+    scaleX: 0.9,
+    scaleY: 0.9
+  },
+}
 
 export default function Home() {
   return (
@@ -161,7 +196,7 @@ export default function Home() {
               initial="hidden"
               whileInView="visible"
               viewport={{once: false, amount: 0.9, margin: "20px"}}
-              variants={sponsorVars[2]}>Our Sponsors:</motion.h1>
+              variants={slideTransitionVars[2]}>Our Sponsors:</motion.h1>
           </motion.div>
           <motion.div
             className={styles.s1}
@@ -169,11 +204,11 @@ export default function Home() {
             initial="hidden"
             whileInView="visible"
             viewport={{once: false, amount: 0.9, margin: "20px"}}
-            variants={sponsorVars[0]}>
+            variants={slideTransitionVars[0]}>
             <Image
-              src="/vercel.svg"
-              width={300}
-              height={200}
+              src="/hackclub-flag.png"
+              width={525}
+              height={184}
             />
           </motion.div>
           <motion.div className={styles.s2}
@@ -181,11 +216,11 @@ export default function Home() {
                initial="hidden"
                whileInView="visible"
                viewport={{once: false, amount: 0.9, margin: "20px"}}
-               variants={sponsorVars[1]}>
+               variants={slideTransitionVars[1]}>
             <Image
-              src="/vercel.svg"
-              width={300}
-              height={200}
+              src="/mlh-logo-black.png"
+              width={384}
+              height={162}
             />
           </motion.div>
           <motion.div className={styles.s3}
@@ -193,7 +228,7 @@ export default function Home() {
               initial="hidden"
               whileInView="visible"
               viewport={{once: false, amount: 0.9, margin: "20px"}}
-              variants={sponsorVars[0]}>
+              variants={slideTransitionVars[0]}>
             <Image
               src="/vercel.svg"
               width={300}
@@ -205,7 +240,7 @@ export default function Home() {
               initial="hidden"
               whileInView="visible"
               viewport={{once: false, amount: 0.9, margin: "20px"}}
-              variants={sponsorVars[1]}>
+              variants={slideTransitionVars[1]}>
             <Image
               src="/vercel.svg"
               width={300}
@@ -219,21 +254,34 @@ export default function Home() {
             <h2>We are very grateful to all our sponsors who help makes events like these possible!</h2>
           </motion.div>
         </div>
+        <motion.h1
+          className={styles.donate}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{once: false, amount: 0.9, margin: "20px"}}
+          variants={slideTransitionVars[1]}
+        >
+          If you would like to donate, you can do so <a href="https://bank.hackclub.com/donations/start/forsyth-county-hacks" target="_blank">
+             <u>here</u>.
+          </a>
+        </motion.h1>
         <Spacer/>
-        <h1 className={styles.donateh}>If you would like to donate, you can do so here:</h1>
-        <iframe
-          src={"https://bank.hackclub.com/donations/start/forsyth-county-hacks"}
-          className={styles.donate}/>
-        <Spacer/>
-        <div className={styles.contact}>
-          <h2>Contact Us</h2>
-          <hr/>
-          <p>
-            Email: something@email.ratio<br/>
-            Phone: 420-420-6969
-          </p>
-        </div>
       </main>
+      <div className={styles.contact}>
+        <h2>Contact Us</h2>
+        <hr/>
+        <p>
+          Email: something@email.ratio<br/>
+          Phone: 420-420-6969
+        </p>
+        <br/>
+        <br/>
+        <br/>
+        <p>
+          Forsyth County Hacks  is fiscally sponsored by Hack Club Bank, a project by The Hack
+          Foundation (d.b.a. Hack Club), a 501(c)(3) nonprofit (EIN: 81-2908499).
+        </p>
+      </div>
     </>
   )
 }

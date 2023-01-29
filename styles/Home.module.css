@@ -420,54 +420,67 @@
 }
 
 .s1 {
+  padding: 20px;
   grid-area: a;
   display: flex;
   align-content: center;
   margin: auto;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
 }
 .s2 {
+  padding: 20px;
   grid-area: b;
   display: flex;
   align-content: center;
   margin: auto;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
 }
 .s3 {
+  padding: 20px;
   grid-area: c;
   display: flex;
   align-content: center;
   margin: auto;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
 }
 .s4 {
+  padding: 20px;
   grid-area: d;
   display: flex;
   align-content: center;
   margin: auto;
-}
-
-.donateh {
   width: 100%;
-  font-size: 30px;
-  font-family: var(--font-mono);
-  padding: 20px;
-  margin: 20px;
-  text-align: center;
+  height: 100%;
+  justify-content: center;
 }
 
 .donate {
-  width: 50vw ;
-  height: 70vh;
+  font-family: var(--font-mono);
+  font-size: 20px;
+  justify-self: center;
+  align-self: center;
+}
+
+.donate a {
+  color: #6488EA;
 }
 
 .contact {
+  display: block;
   background-color: #001236;
   font-family: var(--font-mono);
   font-size: 14px;
   text-align: left;
   align-content: center;
-  float: left;
   padding: 20px;
-  width: 100%;
-  margin: 20px
+  width: auto;
+  margin: 50px;
 }
 
 .contact hr {
@@ -523,10 +536,6 @@
    }
   .contact {
     width: 90%;
-  }
-  .donate {
-    width: 90vw;
-    height: 100vh;
   }
 }
 
