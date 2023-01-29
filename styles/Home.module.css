@@ -348,6 +348,7 @@
   box-shadow: 0 0 30px 10px #001236;
   max-height: 501px;
   max-width: 501px;
+  margin-right: 20px;
   border: var(--tile-border);
 }
 
@@ -393,6 +394,55 @@
   padding: 20px;
 }
 
+.sponsor {
+  display: grid;
+  grid:
+    's s'
+    'a b'
+    'c d'
+    't t';
+  width: 100%;
+  overflow: clip;
+}
+
+.sponsortit {
+  grid-area: s;
+  font-size: 30px;
+  font-family: var(--font-mono);
+  text-align: center;
+}
+.sponsortxt {
+  grid-area: t;
+  font-size: 14px;
+  font-family: var(--font-mono);
+  text-align: center;
+}
+
+.s1 {
+  grid-area: a;
+  display: flex;
+  align-content: center;
+  margin: auto;
+}
+.s2 {
+  grid-area: b;
+  display: flex;
+  align-content: center;
+  margin: auto;
+}
+.s3 {
+  grid-area: c;
+  display: flex;
+  align-content: center;
+  margin: auto;
+}
+.s4 {
+  grid-area: d;
+  display: flex;
+  align-content: center;
+  margin: auto;
+}
+
 .contact {
   background-color: #001236;
   font-family: var(--font-mono);
@@ -421,14 +471,15 @@
     font-size: 0;
   }
   .when h1 {
-    font-size: 30px;
+    font-size: 20px;
   }
   .main {
     padding: 0;
   }
   .what span {
-    max-height: 60vh;
+    max-height: 80vh;
     margin: 0;
+    width: 100%;
   }
   .what p {
     font-size: 12px;
@@ -437,6 +488,7 @@
     width: 0;
     height: 0;
     display: none;
+    margin: 0;
   }
   .faq h1 {
     font-size: 30px;
@@ -444,6 +496,16 @@
   .faq p {
     font-size: 14px;
   }
+  .sponsor {
+     display: grid;
+     grid:
+      's'
+      'a'
+      'b'
+      'c'
+      'd'
+      't';
+   }
   .contact {
     width: 90%;
   }

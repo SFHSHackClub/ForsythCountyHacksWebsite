@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.css'
 import ScrollToTopButton from "../components/topButton";
 import QAlist from "../components/qalist";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const inter = Inter({ subsets: ['latin'] })
 const expandVars = {
@@ -20,7 +21,7 @@ const expandVars = {
 const textExpandVars = {
   visible: {
     opacity: 1,
-    marginRight: 40,
+    marginLeft: 0,
     transition: {
       when: "beforeChildren",
       staggerChildren: 0.05,
@@ -28,7 +29,7 @@ const textExpandVars = {
   },
   hidden: {
     opacity: 0,
-    marginRight: 0,
+    marginLeft: 50,
     transition: {
       when: "beforeChildren",
       staggerChildren: 0.05,
@@ -46,6 +47,39 @@ const headerVars = {
     marginTop: -50,
   }
 }
+
+const sponsorVars = [
+  {
+    visible: {
+      opacity: 1,
+      x: 0,
+    },
+    hidden: {
+      opacity: 0,
+      x: 30,
+    }
+  },
+  {
+    visible: {
+      opacity: 1,
+      x: 0,
+    },
+    hidden: {
+      opacity: 0,
+      x: -30
+    }
+  },
+  {
+    visible: {
+      opacity: 1,
+      x: 0
+    },
+    hidden: {
+      opacity: 0,
+      x: 20
+    }
+  }
+]
 
 export default function Home() {
   return (
@@ -98,14 +132,14 @@ export default function Home() {
             width={500}
             initial="hidden"
             whileInView="visible"
-            viewport={{once: false, amount: 0.8, margin: "20px"}}
+            viewport={{once: false, amount: 0.5, margin: "20px"}}
             variants={expandVars}
           />
           <motion.span
             layout
             initial="hidden"
             whileInView="visible"
-            viewport={{once: false, amount: 0.8, margin: "20px"}}
+            viewport={{once: false, amount: 0.5, margin: "20px"}}
             variants={textExpandVars}>
             <motion.h1 variants={textExpandVars}>What is a it?</motion.h1>
             <motion.p variants={textExpandVars}> Forsyth Hacks is a full-day high school hackathon for building projects, making new friends, and having fun. </motion.p>
@@ -116,6 +150,76 @@ export default function Home() {
         </div>
         <Spacer/>
         <QAlist/>
+        <Spacer/>
+        <Spacer/>
+        <Spacer/>
+        <Spacer/>
+        <div className={styles.sponsor}>
+          <motion.div className={styles.sponsortit}>
+            <motion.h1
+              layout
+              initial="hidden"
+              whileInView="visible"
+              viewport={{once: false, amount: 0.9, margin: "20px"}}
+              variants={sponsorVars[2]}>Our Sponsors:</motion.h1>
+          </motion.div>
+          <motion.div
+            className={styles.s1}
+            layout
+            initial="hidden"
+            whileInView="visible"
+            viewport={{once: false, amount: 0.9, margin: "20px"}}
+            variants={sponsorVars[0]}>
+            <Image
+              src="/vercel.svg"
+              width={300}
+              height={200}
+            />
+          </motion.div>
+          <motion.div className={styles.s2}
+               layout
+               initial="hidden"
+               whileInView="visible"
+               viewport={{once: false, amount: 0.9, margin: "20px"}}
+               variants={sponsorVars[1]}>
+            <Image
+              src="/vercel.svg"
+              width={300}
+              height={200}
+            />
+          </motion.div>
+          <motion.div className={styles.s3}
+              layout
+              initial="hidden"
+              whileInView="visible"
+              viewport={{once: false, amount: 0.9, margin: "20px"}}
+              variants={sponsorVars[0]}>
+            <Image
+              src="/vercel.svg"
+              width={300}
+              height={200}
+            />
+          </motion.div>
+          <motion.div className={styles.s4}
+              layout
+              initial="hidden"
+              whileInView="visible"
+              viewport={{once: false, amount: 0.9, margin: "20px"}}
+              variants={sponsorVars[1]}>
+            <Image
+              src="/vercel.svg"
+              width={300}
+              height={200}
+            />
+          </motion.div>
+          <motion.div className={styles.sponsortxt}
+              initial={{opacity: 0}}
+              whileInView={{opacity: 1}}
+              viewport={{once: false, amount: 0.9, margin: "0px"}}>
+            <h2>We are very grateful to all our sponsors who help makes events like these possible!</h2>
+          </motion.div>
+        </div>
+        <Spacer/>
         <Spacer/>
         <div className={styles.contact}>
           <h2>Contact Us</h2>
@@ -135,4 +239,3 @@ function Spacer() {
     <div className={styles.spacer}></div>
   )
 }
-
