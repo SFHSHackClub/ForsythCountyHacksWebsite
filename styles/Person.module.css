@@ -1,0 +1,23 @@
+.thing {
+    grid:
+        'a'
+        'b';
+    justify-content: center;
+    padding: 20px;
+    margin: 20px;
+}
+.thing img {
+    grid-area: a;
+    border-radius: 100px;
+}
+.thing p {
+    grid-area: b;
+    font-family: var(--font-mono);
+    font-size: 24px;
+    font-weight: bolder;
+}
+.thing h2 {
+    grid-area: b;
+    font-family: var(--font-mono);
+    font-size: 20px;
+}

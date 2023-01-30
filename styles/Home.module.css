@@ -25,7 +25,7 @@
 
 .description {
   display: inherit;
-  align-items: start;
+  align-items: center;
   font-size: 0.85rem;
   max-width: var(--max-width);
   width: 100%;
@@ -305,8 +305,7 @@
 }
 
 .spacer {
-  padding-bottom: 70px;
-  padding-top: 70px;
+  height: 50vh;
   width: 100vw;
   display: marker;
 }
@@ -344,7 +343,6 @@
 
 .what img {
   left: 10vw;
-  transform: translateZ(0);
   overflow: clip;
   box-shadow: 0 0 30px 10px #001236;
   max-height: 501px;
@@ -402,6 +400,7 @@
     'a b'
     'c d'
     't t';
+  grid-auto-columns: 1fr;
   width: 100%;
   overflow: clip;
 }
@@ -419,45 +418,26 @@
   text-align: center;
 }
 
-.s1 {
+.sponsor div {
   padding: 20px;
-  grid-area: a;
   display: flex;
   align-content: center;
   margin: auto;
-  width: 100%;
   height: 100%;
   justify-content: center;
+  width: auto;
+}
+.s1 {
+  grid-area: a;
 }
 .s2 {
-  padding: 20px;
   grid-area: b;
-  display: flex;
-  align-content: center;
-  margin: auto;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
 }
 .s3 {
-  padding: 20px;
   grid-area: c;
-  display: flex;
-  align-content: center;
-  margin: auto;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
 }
 .s4 {
-  padding: 20px;
   grid-area: d;
-  display: flex;
-  align-content: center;
-  margin: auto;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
 }
 
 .donate {
@@ -469,6 +449,21 @@
 
 .donate a {
   color: #6488EA;
+}
+
+.team {
+  display: grid;
+  grid:
+    't t'
+    '1 2';
+  grid-auto-columns: 1fr;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 20px;
+  justify-content: center;
+  align-content: center;
+  padding: 20px;
+  margin: auto;
 }
 
 .contact {
@@ -534,8 +529,37 @@
       'd'
       't';
    }
+  .sponsor h1 {
+    width: 100vw;
+  }
+  .sponsor div {
+    width: 100vw;
+  }
+  .donate {
+    width: 100vw;
+    padding: 10px;
+    text-align: center;
+  }
+  .sponsor div img {
+    width: 90vw;
+  }
+  .team {
+    grid:
+    't'
+    '1'
+    '2';
+    font-size: 14px;
+  }
   .contact {
-    width: 90%;
+    display: block;
+    background-color: #001236;
+    font-family: var(--font-mono);
+    font-size: 14px;
+    text-align: left;
+    align-content: center;
+    padding: 20px;
+    width: auto;
+    margin: 20px;
   }
 }
 
