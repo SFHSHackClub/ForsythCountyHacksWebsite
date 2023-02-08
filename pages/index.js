@@ -141,8 +141,8 @@ export default function Home() {
             <motion.h1 variants={textExpandVars}>What is a Hackathon?</motion.h1>
             <motion.p variants={textExpandVars}> Forsyth Hacks is a full-day high school hackathon for building projects, making new friends, and having fun. </motion.p>
             <motion.p variants={textExpandVars}>This event is an opportunity for students to explore the realm of computer science and bring their creative ideas to life through a collaborative and competitive experience. Students can form groups and work together on a coding project based on the theme and then present them at the end!</motion.p>
-            <motion.p variants={textExpandVars}>It doesn't matter if you've never written a piece of code in your life, or have already created an AI robot that writes essays for you. Everyone of every skill level is invited to join us in workshops, engage in countless activities, and meet other like-minded students!</motion.p>
-            <motion.p variants={textExpandVars}>Create projects, memories and guide the story of your STEM journey at Forsyth Hacks!</motion.p>
+            <motion.p variants={textExpandVars}>It doesn't matter if you've never written a piece of code in your life or have already created an AI robot that writes essays for you. Everyone of every skill level is invited to join us in workshops, engage in countless activities, and meet other like-minded students!</motion.p>
+            <motion.p variants={textExpandVars}>Create projects, memories, and guide the story of your STEM journey at Forsyth Hacks!</motion.p>
           </motion.span>
         </div>
         <QAlist/>
