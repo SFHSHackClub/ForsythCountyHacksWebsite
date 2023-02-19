@@ -82,6 +82,34 @@ const slideTransitionVars = [
   }
 ]
 
+const scrollOptions = {
+  home: {
+    top: 0,
+    left: 0,
+    behavior: "smooth"
+  },
+  register: {
+    top: 420,
+    left: 0,
+    behavior: 'smooth'
+  },
+  FAQ: {
+    top: 1600,
+    left: 0,
+    behavior: 'smooth'
+  },
+  Sponsors: {
+    top: 3700,
+    left: 0,
+    behavior: 'smooth'
+  },
+  SponsorsMobile: {
+    top: 3500,
+    left: 0,
+    behavior: 'smooth'
+  }
+}
+
 export default function Home() {
   return (
     <>
@@ -94,20 +122,22 @@ export default function Home() {
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin/>
             <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400&display=swap" rel="stylesheet"/>
       </Head>
-      <div className={styles.header}>
-        <div className={styles.description}>
+      <div className={styles.description}>
+        <a onClick={() => {
+          window.scrollTo(scrollOptions.home);
+        }}>
           <motion.img
-                src="/hacks.png"
-                className={styles.hackLogo}
-                width={200}
-                height={200}
-                priority
-                layout
-                initial="hidden"
-                whileInView="visible"
-                viewport={{once: false, amount: 0.9, margin: "20px"}}
-                variants={headerVars}
+            src="/hacks.png"
+            className={styles.hackLogo}
+            width={200}
+            height={200}
+            priority
+            layout
           />
+        </a>
+        <a className={styles.titleLink} onClick={() => {
+          window.scrollTo(scrollOptions.home);
+        }}>
           <motion.p
             layout
             initial="hidden"
@@ -116,12 +146,33 @@ export default function Home() {
             variants={headerVars}>
             forsyth county hacks
           </motion.p>
-        </div>
+        </a>
+        <button className={styles.btn1} onClick={() => {
+          window.scrollTo(scrollOptions.register);
+        }}>
+          Register
+        </button>
+        <button className={styles.btn2} onClick={() => {
+          window.scrollTo(scrollOptions.FAQ);
+        }}>
+          FAQ
+        </button>
+        <button className={styles.btn3} onClick={() => {
+          window.scrollTo(window.innerWidth > 700 ? scrollOptions.Sponsors : scrollOptions.SponsorsMobile);
+        }}>
+          Sponsors
+        </button>
+      </div>
+      <div className={styles.header}>
         <div className={styles.when}>
-          <h1>April Something, 2023<hr/>Some Library somewhere... </h1>
+          <h1>April 15, 2023<hr/>TBD</h1>
         </div>
       </div>
       <main className={styles.main}>
+        <a href="https://forms.gle/Js3cxsNr5dysU8Mc8" target="_blank"><button className={styles.registerbtn}>
+          Register Here
+        </button></a>
+        <Spacer/>
         <div className={[styles.what, styles.section].join(" ")}>
           <motion.img
             src="/hacker.jpg"
@@ -234,8 +285,7 @@ export default function Home() {
         <h2>Contact Us</h2>
         <hr/>
         <p>
-          Email: something@email.ratio<br/>
-          Phone: 420-420-6969
+          Email: hackclubsfhs@gmail.com<br/>
         </p>
         <br/>
         <br/>

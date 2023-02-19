@@ -31,6 +31,11 @@ export default function QAlist() {
         <div className={styles.faq}>
           <motion.ul>
           {appearli(
+            <p><b>Will there be hacking?</b>
+              <br/><br/>
+              no, we’re not “hacking into the mainframe”. The term merely stands for coding and tinkering with computers.
+            </p>)}
+          {appearli(
             <p><b>Is there a registration fee?</b>
             <br/><br/>
             nope! forsyth county hacks is free to participate in!

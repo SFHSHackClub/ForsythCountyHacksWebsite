@@ -13,11 +13,11 @@
 .thing p {
     grid-area: b;
     font-family: var(--font-mono);
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bolder;
 }
 .thing h2 {
     grid-area: b;
     font-family: var(--font-mono);
-    font-size: 20px;
+    font-size: 16px;
 }

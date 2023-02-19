@@ -24,31 +24,123 @@
  }
 
 .description {
-  display: inherit;
+  padding: 10px;
+  background-color: #001236;
+  position: fixed;
+  display: grid;
+  grid: 'a b c d e';
   align-items: center;
   font-size: 0.85rem;
-  max-width: var(--max-width);
-  width: 100%;
+  width: 100vw;
   z-index: 2;
   font-family: var(--font-mono);
-  min-height: 25vh;
+  height: fit-content;
+  justify-content: space-evenly;
 }
 
 .hackLogo {
+  grid-area: a;
   display: block;
   margin-left: 20px;
   gap: 0.5rem;
 }
 
 .description p {
-  text-align: center;
+  grid-area: b;
+  text-align: left;
   margin-right: auto;
-  margin-left: auto;
   padding: 1rem;
   font-size: 60px;
 }
 
-@media screen and (min-width: 600px) {
+.description button {
+  background-color: #6488EA;
+  border: 2px solid #050505;
+  border-radius: 30px;
+  box-shadow: #00246c 4px 4px 0 0;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  max-width: 150px;
+  margin: 20px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.description button:hover {
+  background-color: #606060;
+}
+
+.description button:active {
+  box-shadow: #003398 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+@media (max-height: 700px) {
+  .description p {
+    font-size: 40px;
+  }
+  .hackLogo {
+    max-height: 20vh;
+    height: auto;
+    width: auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .hackLogo {
+    height: auto;
+    width: auto;
+    max-width: 20vw;
+  }
+  .description {
+    padding: 10px;
+  }
+  .description p {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 700px) {
+  .hackLogo {
+    height: auto;
+    width: auto;
+    max-width: 25vw;
+  }
+  .description {
+    grid: 'a c d e';
+    padding: 10px;
+    padding-top: 50px;
+  }
+  .titleLink {
+    display: none;
+  }
+  .description button {
+    margin: 5px;
+    padding: 10px;
+    font-size: 10px;
+    min-width: 75px;
+    height: 40px;
+    line-height: 10px;
+  }
+}
+
+.btn1 {
+  grid-area: c;
+}
+
+.btn2 {
+  grid-area: d;
+}
+
+.btn3 {
+  grid-area: e;
 }
 
 .code {
@@ -288,6 +380,7 @@
   align-content: center;
   display: flex;
   height: 60vh;
+  margin-top: 20vh;
 }
 
 .when h1 {
@@ -302,6 +395,21 @@
   border: 1px solid rgb(var(--foreground-rgb));
   margin-bottom: 20px;
   margin-top: 20px;
+}
+
+.registerbtn {
+  width: 60vw;
+  height: calc(max(30px, 7vw));
+  color: #050505;
+  font-family: var(--font-mono);
+  font-size: calc(min(3.25vw, 30px));
+  background-color: #F0F0F0;
+  border-radius: 60px;
+  border: 2px solid #050505;
+}
+
+.registerbtn:hover {
+  box-shadow: #003398 0 0 30px;
 }
 
 .spacer {
@@ -407,7 +515,7 @@
 
 .sponsortit {
   grid-area: s;
-  font-size: 30px;
+  font-size: 24px;
   font-family: var(--font-mono);
   text-align: center;
 }
@@ -442,7 +550,7 @@
 
 .donate {
   font-family: var(--font-mono);
-  font-size: 20px;
+  font-size: 16px;
   justify-self: center;
   align-self: center;
 }
@@ -470,12 +578,12 @@
   display: block;
   background-color: #001236;
   font-family: var(--font-mono);
-  font-size: 14px;
+  font-size: 10px;
   text-align: left;
   align-content: center;
   padding: 20px;
   width: auto;
-  margin: 50px;
+  margin: 20px;
 }
 
 .contact hr {
@@ -554,7 +662,7 @@
     display: block;
     background-color: #001236;
     font-family: var(--font-mono);
-    font-size: 14px;
+    font-size: 10px;
     text-align: left;
     align-content: center;
     padding: 20px;
