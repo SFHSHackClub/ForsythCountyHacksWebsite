@@ -6,6 +6,7 @@ import QAlist from "../components/qalist";
 import {motion} from "framer-motion";
 import Image from "next/image";
 import PersonThing from "../components/PersonThing";
+import {useRef} from "react";
 
 const inter = Inter({ subsets: ['latin'] })
 const expandVars = {
@@ -82,35 +83,12 @@ const slideTransitionVars = [
   }
 ]
 
-const scrollOptions = {
-  home: {
-    top: 0,
-    left: 0,
-    behavior: "smooth"
-  },
-  register: {
-    top: 420,
-    left: 0,
-    behavior: 'smooth'
-  },
-  FAQ: {
-    top: 1600,
-    left: 0,
-    behavior: 'smooth'
-  },
-  Sponsors: {
-    top: 3700,
-    left: 0,
-    behavior: 'smooth'
-  },
-  SponsorsMobile: {
-    top: 3500,
-    left: 0,
-    behavior: 'smooth'
-  }
-}
-
 export default function Home() {
+
+  const ref1 = useRef();
+  const ref2 = useRef();
+  const ref3 = useRef();
+
   return (
     <>
       <Head>
@@ -124,7 +102,7 @@ export default function Home() {
       </Head>
       <div className={styles.description}>
         <a onClick={() => {
-          window.scrollTo(scrollOptions.home);
+          window.scrollTo({behavior: 'smooth', top: 0});
         }}>
           <motion.img
             src="/hacks.png"
@@ -136,7 +114,7 @@ export default function Home() {
           />
         </a>
         <a className={styles.titleLink} onClick={() => {
-          window.scrollTo(scrollOptions.home);
+          window.scrollTo({behavior: 'smooth', top: 0});
         }}>
           <motion.p
             layout
@@ -148,28 +126,28 @@ export default function Home() {
           </motion.p>
         </a>
         <button className={styles.btn1} onClick={() => {
-          window.scrollTo(scrollOptions.register);
+          window.scrollTo({behavior: 'smooth', top: ref1.current.offsetTop-0.5*window.innerHeight});
         }}>
           Register
         </button>
         <button className={styles.btn2} onClick={() => {
-          window.scrollTo(scrollOptions.FAQ);
+          window.scrollTo({behavior: 'smooth', top: ref2.current.offsetTop-0.3*window.innerHeight});
         }}>
           FAQ
         </button>
         <button className={styles.btn3} onClick={() => {
-          window.scrollTo(window.innerWidth > 700 ? scrollOptions.Sponsors : scrollOptions.SponsorsMobile);
+          window.scrollTo({behavior: 'smooth', top: ref3.current.offsetTop-0.3*window.innerHeight});
         }}>
           Sponsors
         </button>
       </div>
       <div className={styles.header}>
         <div className={styles.when}>
-          <h1>April 15, 2023<hr/>TBD</h1>
+          <h1>April 15, 2023</h1>
         </div>
       </div>
       <main className={styles.main}>
-        <a href="https://forms.gle/Js3cxsNr5dysU8Mc8" target="_blank"><button className={styles.registerbtn}>
+        <a href="https://forms.gle/Js3cxsNr5dysU8Mc8" target="_blank"><button ref={ref1} className={styles.registerbtn}>
           Register Here
         </button></a>
         <Spacer/>
@@ -196,9 +174,10 @@ export default function Home() {
             <motion.p variants={textExpandVars}>Create projects, memories, and guide the story of your STEM journey at Forsyth Hacks!</motion.p>
           </motion.span>
         </div>
+        <div ref={ref2}/>
         <QAlist/>
         <Spacer/>
-        <div className={styles.sponsor}>
+        <div className={styles.sponsor} ref={ref3}>
           <motion.div className={styles.sponsortit}>
             <motion.h1
               layout
