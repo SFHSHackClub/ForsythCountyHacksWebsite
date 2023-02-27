@@ -270,8 +270,8 @@ export default function Home() {
         <Spacer/>
         <div className={styles.team}>
           <h1 style={{gridArea: 't'}}>Our Team:</h1>
-          <PersonThing image={'/christianpic.png'} text={"Christian Dutton"} descriptor={'Co-Founder'} pronoun={'he/him'} style={{gridArea: '1'}}/>
-          <PersonThing image={'/sahitipic.jpg'} text={"Sahiti Dasari"} descriptor={'Co-Founder'} pronoun={'she/her'} style={{gridArea: '2'}}/>
+          <PersonThing image={'/christianpic.png'} text={"Christian Dutton"} descriptor={'Co-Executive Director'} pronoun={'he/him'} style={{gridArea: '1'}}/>
+          <PersonThing image={'/sahitipic.jpg'} text={"Sahiti Dasari"} descriptor={'Co-Executive Director'} pronoun={'she/her'} style={{gridArea: '2'}}/>
         </div>
       </main>
       <div className={styles.contact}>
