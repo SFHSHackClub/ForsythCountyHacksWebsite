@@ -394,6 +394,9 @@
   font-family: var(--font-mono);
   font-size: 40px;
 }
+.when span {
+  font-size: 20px;
+}
 
 .when hr {
   color: white;
@@ -511,7 +514,7 @@
   grid:
     's s'
     'a b'
-    'c d'
+    'c c'
     't t';
   grid-auto-columns: 1fr;
   width: 100%;
@@ -591,12 +594,20 @@
   margin: 20px;
 }
 
+.contact p {
+
+}
+
 .contact hr {
   width: 250px;
   margin: 0 5px 5px 0;
 }
 
 @media (max-width: 700px) {
+  .when hr {
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
   .section {
     padding: 0;
   }
@@ -607,7 +618,10 @@
     font-size: 0;
   }
   .when h1 {
-    font-size: 20px;
+    font-size: 12px;
+  }
+  .when span {
+    font-size: 7px;
   }
   .main {
     padding: 0;
@@ -655,6 +669,7 @@
   }
   .sponsor div img {
     width: 90vw;
+    height: 90%;
   }
   .team {
     grid:

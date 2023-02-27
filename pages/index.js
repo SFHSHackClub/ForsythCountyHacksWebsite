@@ -143,7 +143,15 @@ export default function Home() {
       </div>
       <div className={styles.header}>
         <div className={styles.when}>
-          <h1>April 15, 2023</h1>
+          <h1>
+            March 25, 2023
+            <hr/>
+            Old Atlanta Rec Center
+            <br/>
+            <span>
+              Esports Arena || 810 Nichols Road, Suwanee
+            </span>
+          </h1>
         </div>
       </div>
       <main className={styles.main}>
@@ -191,39 +199,45 @@ export default function Home() {
             layout
             initial="hidden"
             whileInView="visible"
-            viewport={{once: false, amount: 0.9, margin: "20px"}}
+            viewport={{once: false, amount: 0.5, margin: "20px"}}
             variants={slideTransitionVars[0]}>
-            <Image
-              src="/hackclub-flag.png"
-              width={525}
-              height={184}
-            />
+            <a href="https://hackclub.com" target="_blank">
+              <Image
+                src="/hackclub-flag.png"
+                width={384}
+                height={162}
+              />
+            </a>
           </motion.div>
           <motion.div className={styles.s2}
                layout
                initial="hidden"
                whileInView="visible"
-               viewport={{once: false, amount: 0.9, margin: "20px"}}
+               viewport={{once: false, amount: 0.5, margin: "20px"}}
                variants={slideTransitionVars[1]}>
-            <Image
-              src="/mlh-logo-black.png"
-              width={384}
-              height={162}
-            />
+            <a href="https://mlh.io/" target="_blank">
+              <Image
+                src="/mlh-logo-black.png"
+                width={384}
+                height={162}
+              />
+            </a>
           </motion.div>
-          {/*motion.div className={styles.s3}
+          <motion.div className={styles.s3}
               layout
               initial="hidden"
               whileInView="visible"
-              viewport={{once: false, amount: 0.9, margin: "20px"}}
+              viewport={{once: false, amount: 0.5, margin: "20px"}}
               variants={slideTransitionVars[0]}>
-            <Image
-              src="/vercel.svg"
-              width={300}
-              height={200}
-            />
+            <a href="https://www.postman.com/student-program/student-expert/" target="_blank">
+              <Image
+                src="/postman.png"
+                width={500}
+                height={250}
+              />
+            </a>
           </motion.div>
-          <motion.div className={styles.s4}
+        {/*<motion.div className={styles.s4}
               layout
               initial="hidden"
               whileInView="visible"
@@ -266,6 +280,11 @@ export default function Home() {
         <p>
           Email: hackclubsfhs@gmail.com<br/>
         </p>
+        <a href="https://www.instagram.com/forsythhacks/" target="_blank">
+          <p>
+            Instagram: @forsythhacks
+          </p>
+        </a>
         <br/>
         <br/>
         <br/>
