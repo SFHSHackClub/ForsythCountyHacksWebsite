@@ -117,7 +117,6 @@
   .description {
     grid: 'a c d e';
     padding: 10px;
-    padding-top: 50px;
   }
   .titleLink {
     display: none;
