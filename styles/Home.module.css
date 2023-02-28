@@ -34,7 +34,7 @@
   width: 100vw;
   z-index: 2;
   font-family: var(--font-mono);
-  height: fit-content;
+  height: auto;
   justify-content: space-evenly;
 }
 
@@ -83,7 +83,7 @@
   box-shadow: #003398 2px 2px 0 0;
   transform: translate(2px, 2px);
 }
-@media (max-height: 700px) {
+@media screen and (max-height: 700px) {
   .description p {
     font-size: 40px;
   }
@@ -94,7 +94,7 @@
   }
 }
 
-@media (max-width: 900px) {
+@media screen and (max-width: 900px) {
   .hackLogo {
     height: auto;
     width: auto;
@@ -108,7 +108,7 @@
   }
 }
 
-@media (max-width: 700px) {
+@media screen and (max-width: 700px) {
   .hackLogo {
     height: auto;
     width: auto;
@@ -117,7 +117,6 @@
   .description {
     grid: 'a c d e';
     padding: 10px;
-    padding-top: 50px;
   }
   .titleLink {
     display: none;
@@ -288,7 +287,7 @@
 }
 
 /* Mobile */
-@media (max-width: 700px) {
+@media screen and (max-width: 700px) {
   .content {
     padding: 4rem;
   }
@@ -603,7 +602,7 @@
   margin: 0 5px 5px 0;
 }
 
-@media (max-width: 700px) {
+@media screen and (max-width: 700px) {
   .when hr {
     margin-bottom: 5px;
     margin-top: 5px;
