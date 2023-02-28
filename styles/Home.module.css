@@ -34,7 +34,7 @@
   width: 100vw;
   z-index: 2;
   font-family: var(--font-mono);
-  height: fit-content;
+  height: auto;
   justify-content: space-evenly;
 }
 
