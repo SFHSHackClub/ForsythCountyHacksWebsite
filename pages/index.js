@@ -93,7 +93,7 @@ export default function Home() {
     <>
       <Head>
         <title>Forsyth County Hacks</title>
-        <meta name="description" content="something" />
+        <meta name="description" content="Forsyth Hacks is a full-day high school hackathon for building projects, creating memories, and guiding the story of your STEM journey." />
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <link rel="icon" href="/listArrow.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
