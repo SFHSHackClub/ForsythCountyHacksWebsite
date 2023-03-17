@@ -58,7 +58,7 @@ export default function QAlist() {
           {appearli(
             <p><b>How long is Forsyth Hacks?</b>
             <br/><br/>
-            the event will be a full day long (from 10:15 AM to 5:30 PM)
+            the event will be a full day long (from 9:00 AM to 5:00 PM)
             </p>)}
           {appearli(
             <p><b>Will there be prizes?</b>
