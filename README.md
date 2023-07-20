@@ -11,6 +11,8 @@ It doesn't matter if you've never written a piece of code in your life or have a
 
 Create projects, memories, and guide the story of your STEM journey at Forsyth Hacks!
 
+| Forsyth Hacks | [photos.app.goo.gl/pi...](https://photos.app.goo.gl/piCyiv9YJxfyKUWj8) | Mar. 2023 | Georgia (USA) | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | [@sahitid](https://github.com/sahitid) |
+
 ## Preview
 Preview the live website [here](https://forsythhacks.dev/).
 
