@@ -16,7 +16,7 @@ Create projects, memories, and guide the story of your STEM journey at Forsyth H
 | Forsyth Hacks | [photos.app.goo.gl/pi...](https://photos.app.goo.gl/piCyiv9YJxfyKUWj8) | Mar. 2023 | Georgia (USA) | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | [@sahitid](https://github.com/sahitid) |
 
 ## Preview
-Preview the live website [here](https://forsythhacks.dev/).
+Preview the live website [here](https://forsyth-county-hacks-website.vercel.app/).
 
 ## License
 
